@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
-
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
 	<p id="status">Enter the Metaverse</p>
 	<button id="enterBtn">Enter</button>
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <script type="text/javascript">
+        var statusElement = document.getElementById('status');
+        var enterButton = document.getElementById('enterBtn');
+        enterButton.addEventListener('click', function(){
+            var newElement = document.createElement('h1');
+            newElement.innerText = "Entered Metaverse";
+            statusElement.parentNode.replaceChild(newElement, statusElement);
+        });
+    </script>
 </body>
-
 </html>
